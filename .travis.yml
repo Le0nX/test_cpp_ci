@@ -1,0 +1,14 @@
+language: cpp
+before_script:
+- echo "gtest routine"
+- sudo apt-get install gtest gmock -y
+script:
+- cmake .
+- cmake --build .
+- cmake --build . --target test
+- cmake --build . --target package
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+  - curl -T 
