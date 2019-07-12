@@ -63,4 +63,4 @@ include(CPack)
 
 enable_testing()
 
-add_test(hellotest test_version)
+add_test(hellotest hellotest)

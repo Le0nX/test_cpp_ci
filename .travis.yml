@@ -17,8 +17,7 @@ script:
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
-- exec hellotest
-- exec valgrind helloworld_cli
+- valgrind helloworld_cli
 deploy:
   provider: script
   skip_cleanup: true
