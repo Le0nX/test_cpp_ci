@@ -10,6 +10,14 @@ before_script:
 - sudo make
 - sudo cp -a include/gtest /usr/include
 - sudo cp -a libgtest_main.so libgtest.so /usr/lib/
+- mkdir tmp && cd tmp
+- sudo wget https://github.com/google/googlemock/archive/release-1.7.0.tar.gz
+- sudo tar xf release-1.7.0.tar.gz
+- cd googlemock-release-1.7.0
+- sudo cmake -DBUILD_SHARED_LIBS=ON .
+- sudo make
+- sudo cp -a include/gmock /usr/include
+- sudo cp -a libgmock_main.so libgmock.so /usr/lib/
 - which valgrind
 - cd "${TRAVIS_BUILD_DIR}"
 script:
