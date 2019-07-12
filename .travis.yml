@@ -21,4 +21,4 @@ script:
 deploy:
   provider: script
   skip_cleanup: true
-  script: curl --silent --show-error --fail -T just_for_fun-0.10.$TRAVIS_BUILD_NUMBER-Linux.deb -ule0nx:$BINTRAYKEY https://api.bintray.com/content/le0nx/test_ci/just_for_fun/0.10.$TRAVIS_BUILD_NUMBER
+  script: curl --silent --show-error --fail -T just_for_fun-0.10.$TRAVIS_BUILD_NUMBER-Linux.deb -ule0nx:$BINTRAYKEY https://api.bintray.com/content/le0nx/test_ci/just_for_fun/0.10.$TRAVIS_BUILD_NUMBER/just_for_fun-0.10.$TRAVIS_BUILD_NUMBER-Linux.deb
