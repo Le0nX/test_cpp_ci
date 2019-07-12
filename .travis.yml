@@ -17,9 +17,11 @@ script:
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
-- valgrind helloworld_cli
+- valgrind --verbose ./helloworld_cli
 deploy:
   provider: script
   skip_cleanup: true
   script:
-  - curl -T 
+  - secure: $BINTRAYKEY
+  - curl --silent --show-error --fail\
+    -T just_for_fun-0.10.$TRAVIS_BUILD_NUMBER-Linux.deb -ule0nx:$BINTRAYKEY https://api.bintray.com/content/le0nx/test_ci/just_for_fun/0.10.$TRAVIS_BUILD_NUMBER
