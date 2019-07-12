@@ -1,7 +1,6 @@
 language: cpp
 before_script:
 - echo "gtest routine"
-- sudo apt-get install libgtest-dev libgmock-dev -y
 script:
 - cmake .
 - cmake --build .
