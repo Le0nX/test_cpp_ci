@@ -10,7 +10,7 @@ before_script:
 - sudo make
 - sudo cp -a include/gtest /usr/include
 - sudo cp -a libgtest_main.so libgtest.so /usr/lib/
-- mkdir tmp && cd tmp
+- sudo mkdir tmp && cd tmp
 - sudo wget https://github.com/google/googlemock/archive/release-1.7.0.tar.gz
 - sudo tar xf release-1.7.0.tar.gz
 - cd googlemock-release-1.7.0
